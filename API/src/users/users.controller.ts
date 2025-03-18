@@ -13,7 +13,7 @@ export class UsersController {
   constructor(private readonly usersService: UsersService) {}
 
   @Post()
-  //@UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   //@Roles('Admin')
   //@CurrentUser() user: CurrentUserDto,
   create(@Body() createUserDto: CreateUserDto) {
